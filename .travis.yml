@@ -1,0 +1,44 @@
+language: node_js
+node_js: stable
+# cache:
+  # directories:
+    # - node_modules
+before_script:
+  - git clone --branch master https://github.com/squidyu812/squidyu812.github.io public
+script:
+  - hexo g
+after_success:
+  - cd public
+  - git config user.name "${USER_NAME}"
+  - git config user.email "${EMAIL}"
+  - git add --all .
+  - git commit -m "Update Page"
+  - git push https://${GH_TOKEN}@${GH_REF} master
+branches:
+  only:
+    - hexo-source
+
+
+# # S: Build Lifecycle
+# install:
+#   - npm install
+#   - npm install hexo-cli -g  
+#   - npm install -- save-dev hexo-util
+#   - npm install hexo-deployer-git --save
+#   - npm install hexo-generator-feed --save
+# #before_script:
+#  # - npm install -g gulp
+# script:
+#   - hexo g
+# after_script:
+#   - cd ./public
+#   - git init
+#   - git config user.name "${USER_NAME}"
+#   - git config user.email "${EMAIL}"
+#   - git add .
+#   - git commit -m "Update docs"
+#   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# # E: Build LifeCycle
+# branches:
+#   only:
+#     - source
