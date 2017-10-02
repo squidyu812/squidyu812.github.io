@@ -306,8 +306,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: squidyu
   count: true
 
 # Hypercomments
