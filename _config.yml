@@ -17,9 +17,6 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
-# Disqus
-disqus_shortname: squidyu
-
 # Directory
 source_dir: source
 public_dir: public
