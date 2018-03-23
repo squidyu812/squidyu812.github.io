@@ -12,7 +12,8 @@ tags:
 
 <!-- more -->
 
->##### Note
+>**Note**
+> 
 >Apps are not required to provide a complication; however, they are highly recommended, even if they just act as a launcher for the app. Having a complication on the active watch face provides the following benefits:
 
 >* It gives your app the opportunity to provide vital information to the user whenever they look at the watch.
